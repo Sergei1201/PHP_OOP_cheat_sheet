@@ -23,7 +23,7 @@ class Person
     // Destructor
     public function __destruct()
     {
-        echo 'The object has been destroyed' . PHP_EOL;
+        echo 'The object ' . get_class($this) . ' has been destroyed' . PHP_EOL;
     }
 
     // String representation of an object being instantiated from the class
