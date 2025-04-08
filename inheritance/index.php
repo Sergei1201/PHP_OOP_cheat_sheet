@@ -4,9 +4,10 @@
 
 declare(strict_types=1);
 
-require_once 'Person.php';
-require_once 'Student.php';
-require_once 'Teacher.php';
+// Autoloading all the necessary classes
+spl_autoload_register(function (string $className): void {
+    include $className . '.php';
+});
 
 // Instantiate a new Person object from the Person class
 $person1 = new Person('John', 'Doe', 35, 'john@gmail.com');
