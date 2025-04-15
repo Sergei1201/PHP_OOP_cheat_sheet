@@ -20,16 +20,19 @@ class Garage
     }
 
     /* Public member functions (methods) */
+
+    // Dependency injection here (Car)
     public function addCarToGarage(Car &$car): void
     {
         array_push($this->carsArray, $car);
     }
 
-    public function removeCarFromGarage(int $index): void
+    public function removeCarFromGarage(int $index): array
     {
-        if (count($this->carsArray) > 0 && $index >= 0) {
-            unset($this->carsArray[$index]);
-        }
+        // if (count($this->carsArray) > 0 && ($index >= 0 && $index < count($this->carsArray))) {
+        // unset($this->carsArray[$index]);
+        return array_splice($this->carsArray, $index, 1);
+        // }
     }
 
     public function getCarsFromGarage(): array
