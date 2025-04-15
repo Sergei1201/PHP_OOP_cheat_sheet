@@ -20,7 +20,7 @@ class Garage
     }
 
     /* Public member functions (methods) */
-    public function addCarToGarage(Car $car): void
+    public function addCarToGarage(Car &$car): void
     {
         array_push($this->carsArray, $car);
     }
