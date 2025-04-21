@@ -24,7 +24,7 @@ $garage1->addCarToGarage($ford1);
 $garage1->addCarToGarage($ford2);
 $garage1->addCarToGarage($mercedes1);
 
-$spliced_array = $garage1->removeCarFromGarage(1);
+$spliced_array = $garage1->removeCarFromGarage(0);
 print_r($spliced_array);
 $carsInGarage = $garage1->getCarsFromGarage();
 foreach ($carsInGarage as $car) {

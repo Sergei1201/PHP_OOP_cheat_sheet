@@ -37,3 +37,4 @@ $teachers1Students = $teacher1->getStudents();
 foreach ($teachers1Students as $student) {
     echo $student->getFullInfo() . PHP_EOL;
 }
+var_dump(0 == '');
